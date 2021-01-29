@@ -1,0 +1,7 @@
+{
+  "name": "freeapi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
