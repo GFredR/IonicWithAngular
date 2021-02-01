@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/index/quote', async (req, res)=>{
     let httpUrl = 'https://stock.xueqiu.com/v5/stock/batch/quote.json?symbol=SH000001,SZ399001,SZ399006,SH000688,HKHSI,HKHSCEI,HKHSCCI,.DJI,.IXIC,.INX'
+    res.setHeader('Access-Control-Allow-Origin','*');
     let result;
     try {
         result = await axios.get(httpUrl, options);
@@ -56,6 +57,7 @@ app.get('/api/index/hotStock', async (req, res) => {
 //推荐
 app.get('/api/index/news', async (req, res) => {
     let httpUrl = 'https://xueqiu.com/statuses/livenews/list.json?since_id=-1&max_id=-1&count=15';
+    res.setHeader('Access-Control-Allow-Origin','*');
     let result;
     try {
         result = await axios.get(httpUrl, options);
@@ -67,6 +69,7 @@ app.get('/api/index/news', async (req, res) => {
 //24*7
 app.get('/api/index/day', async (req, res) => {
     let httpUrl = 'https://xueqiu.com/statuses/hot/listV2.json?since_id=-1&max_id=-1&size=15';
+    res.setHeader('Access-Control-Allow-Origin','*');
     let result;
     try {
         result = await axios.get(httpUrl, options);
