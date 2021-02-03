@@ -5,8 +5,18 @@
 </ion-header>
 
 <ion-content *ngIf="!isLoading">
-  <ion-list *ngFor="let item of finNameList">
-    <ion-label>{{item.name}}</ion-label>
+  <ion-list *ngFor="let item of finNameList" lines="full">
+    <ion-item>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+
+      </ion-avatar>
+    </ion-item>
   </ion-list>
 <!--<ion-button >jajajjjaaajaa</ion-button>-->
 </ion-content>
