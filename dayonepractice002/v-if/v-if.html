@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="../vue.js"></script>
+    <div id="app">
+        <h2 v-if="isShow">{{message}}</h2>
+        <h3 v-else>false</h3>
+<!--        遍历数组-->
+        <ul>
+            <li v-for="item in name">{{item}}</li>
+        </ul>
+        <ul>
+            <li v-for="(item, index) in name">{{index+1}}.{{item}}</li>
+        </ul>
+<!--       遍历对象 -->
+        <ul>
+            <li v-for="item in ninjia">{{item}}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key) in ninjia">{{key}}-------{{value}}</li>
+        </ul>
+    </div>
+    <script src="../v-if/vif.js"></script>
+</body>
+</html>

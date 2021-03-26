@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="../vue.js" ></script>
+    <div id="app" v-once>
+        <img v-bind:src="imgUrl">
+        <h2 v-bind:class="getClass()" >{{message}}</h2>
+        <h2 v-bind:class="getMany()">{{message}}</h2>
+        <h2 v-bind:style="{fontSize: '50px', backgroundColor: backColor}">{{message}}</h2>
+        <h2 v-bind:style="{fontSize: '50px', backgroundColor: backColor}">{{allmessage}}</h2>
+        <button v-on:click="clickBtn">按钮</button>
+    </div>
+
+
+    <script src="../v-once/v_onc.js"></script>
+
+</body>
+</html>
