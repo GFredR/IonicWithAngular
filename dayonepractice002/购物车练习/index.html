@@ -41,5 +41,47 @@
         <h2 v-else>购物车为空</h2>
     </div>
     <script src="../购物车练习/main.js"></script>
+    <div id="vMd">
+        <label>
+            <input type="radio" v-model="gender" name="sex" value="男">男
+        </label>
+        <label>
+            <input type="radio" v-model="gender" name="sex" value="女">女
+        </label>
+            <input type="text" v-model="bindmsg">
+        <h2>{{bindmsg}}</h2>
+        <h2>选择的是：{{gender}}</h2>
+        <label>
+            <input type="checkbox" id="accept" v-model="accept">同意
+        </label>
+        <button :disabled="!accept">下一步</button>
+        <label>
+            <input type="checkbox" v-model="hobbies" value="打游戏">打游戏
+        </label>
+        <label>
+            <input type="checkbox" v-model="hobbies" value="钢琴">钢琴
+        </label>
+        <label>
+            <input type="checkbox" v-model="hobbies" value="网球">网球
+        </label>
+        <h2>{{hobbies}}</h2>
+        <cpn v-bind:cmovies="movies">
+        </cpn>
+        <slot name="hahha">
+            <span>lalalalla</span>
+        </slot>
+        <slot name="aaaa">
+            <span>aaa</span>
+        </slot>
+        <slot name="bbbb">
+            <span>bbb</span>
+        </slot>
+<!--        <haha-com></haha-com>-->
+    </div>
+    <template id="cpn">
+        <h2>{{cmovies}}</h2>
+    </template>
+
+    <script src="../购物车练习/v-model.js"></script>
 </body>
 </html>
